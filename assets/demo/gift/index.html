@@ -8,16 +8,20 @@
   <link rel="dns-prefetch" href="http://wang-yi-an.github.io">
   <title>敲代码的小光头</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="18级本科学生，入门菜鸟一枚。">
+  <meta name="description" content="礼物 - 3.8 	 	 	 	   	 	 		3.8节礼物，来了… 		 		 			 				 					首先，你要输入我的生日 					 					接着，摇一摇… 					 					最后，这就是见证奇迹的时刻… 				 				 					3.8节快乐！ 					祝身体健康,平安长乐 					请打开音量收听…">
 <meta property="og:type" content="website">
 <meta property="og:title" content="敲代码的小光头">
-<meta property="og:url" content="http://wang-yi-an.github.io/index.html">
+<meta property="og:url" content="http://wang-yi-an.github.io/assets/demo/gift/index.html">
 <meta property="og:site_name" content="敲代码的小光头">
-<meta property="og:description" content="18级本科学生，入门菜鸟一枚。">
+<meta property="og:description" content="礼物 - 3.8 	 	 	 	   	 	 		3.8节礼物，来了… 		 		 			 				 					首先，你要输入我的生日 					 					接着，摇一摇… 					 					最后，这就是见证奇迹的时刻… 				 				 					3.8节快乐！ 					祝身体健康,平安长乐 					请打开音量收听…">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://wang-yi-an.github.io/assets/demo/gift/img/shake.png">
+<meta property="article:published_time" content="2020-11-15T02:12:38.984Z">
+<meta property="article:modified_time" content="2017-07-28T18:51:08.000Z">
 <meta property="article:author" content="wang yian">
 <meta property="article:tag" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://wang-yi-an.github.io/assets/demo/gift/img/shake.png">
   
     <link rel="alternative" href="/atom.xml" title="敲代码的小光头" type="application/atom+xml">
   
@@ -149,33 +153,126 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/24/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
-    </h1>
-  
-
-        
-        <a href="/2020/09/24/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-09-24T10:10:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-24</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p>
-<hr>
+        <!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+	<title>礼物 - 3.8</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/zepto.min.js"></script>
+	<script src="js/shake.js"></script>
+</head>
+<body>
+	<!-- <div id="my_player"></div> -->
+	<header>
+		<p>3.8节礼物，来了…</p>
+		<div class="paper-t"></div>
+		<div class="main">
+			<div class="main-top top2">
+				<section id="se1">
+					<p>首先，你要输入我的生日</p>
+					<input id="myBir" type="text" placeholder="4位数，格式为:mmdd"/>
+					<p>接着，摇一摇…</p>
+					<img src="img/shake.png"/>
+					<p>最后，这就是见证奇迹的时刻…</p>
+				</section>
+				<section id="se2" class="hide">
+					<p>3.8节快乐！</p>
+					<p>祝身体健康,平安长乐</p>
+					<p>请打开音量收听…</p>
+				</section>
+			</div>
+		</div>
+		<div class="paper-b"></div>
+	</header>
+</body>
+	<script>
+		var Main = (function() {
+			function playAudio(src) {
+			    if (typeof Audio != "undefined") { 
+			        new Audio(src).play() ;
+			    } else if (typeof device != "undefined") {
+			        if (device.platform == 'Android') {
+			            console.log(src);
+			        }
+			        var mediaRes = new Media(src,
+			            function onSuccess() {
+			                mediaRes.release();
+			            },
+			            function onError(e){
+			                console.log("error playing sound: " + JSON.stringify(e));
+			            });
+			        mediaRes.play();
 
+			    } else {
+			        alert("no sound API to play: " + src);
+			    }
+			}
+			window.addEventListener('shake', autoRun, false);
+			function autoRun(){
+				if($("#myBir").val() == "0425"){
+					$("#se1").hide();
+					$("#se2").show();
+					playAudio("media/gift.ogg");
+				}else{
+					alert("生日错误");
+				}
+				
+			}
+			var init = function() {
+				
+			}
+			return {
+				init: init
+			}
+		})();
+
+		$(Main.init());
+	</script>
+</html>
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/asserts/zzhifu.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/asserts/wzhifu.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -184,16 +281,65 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/24/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://wang-yi-an.github.io/assets/demo/gift/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -213,83 +359,30 @@
 
 
 
-
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/24/hello-world/">Hello World</a>
-    </h1>
   
 
-        
-        <a href="/2020/09/24/hello-world/" class="archive-article-date">
-  	<time datetime="2020-09-24T08:23:46.247Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/24/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  
 
   
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://wang-yi-an.github.io/assets/demo/gift/index.html",
+  owner: '1723811836@qq.com',
+  repo: 'comment-warehouse',
+  oauth: {
+    client_id: 'fda683db86e04710de53',
+    client_secret: '498dc97d5da564a1a3c5b2ca9f1d4762ead5da6d',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
   
 
 
@@ -312,7 +405,7 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
 		isTag: false,
